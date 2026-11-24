@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   <div class="page-noise" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="صفحه اصلی">ND<span>.</span></a>
@@ -19,6 +20,7 @@
       <a href="#about" data-i18n="navAbout">درباره من</a>
       <a href="#skills" data-i18n="navSkills">مهارت‌ها</a>
       <a href="#work" data-i18n="navWork">نمونه‌کارها</a>
+      <a href="#education" data-i18n="navEducation">تحصیلات</a>
       <a href="#contact" data-i18n="navContact">ارتباط</a>
     </nav>
     <div class="header-actions">
@@ -31,7 +33,7 @@
     <section class="hero section-wrap" id="home">
       <div class="hero-copy reveal">
         <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="heroEyebrow">تولید محتوا · تدوین · روایت بصری</span></p>
-        <h1><span data-i18n="heroHello">سلام، من</span><br><em>نیلوفر دیونداری</em><span data-i18n="heroPeriod"> هستم.</span></h1>
+        <h1><span data-i18n="heroHello">سلام، من</span><br><em data-i18n="heroName">نیلوفر دیونداری</em><span data-i18n="heroPeriod"> هستم.</span></h1>
         <p class="hero-description" data-i18n="heroDescription">ایده‌ها را با ترکیب تصویر، صدا و تکنولوژی به محتوایی هدفمند و تأثیرگذار تبدیل می‌کنم.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work" data-i18n="viewWork">دیدن نمونه‌کارها <span aria-hidden="true">↙</span></a>
@@ -90,36 +92,82 @@
           <h2 data-i18n="skillsTitle">ابزارها و مهارت‌ها</h2>
           <p class="section-subtitle" data-i18n="skillsIntro">ترکیبی از مهارت‌های اجرایی، نرم‌افزارهای تخصصی و ابزارهای خلاقانه.</p>
         </div>
-        <div class="skill-groups">
+        <div class="skill-groups skill-groups-expanded">
           <article class="skill-card reveal">
-            <span class="card-index">A</span>
-            <h3 data-i18n="skillGroup1">تدوین و پس‌تولید</h3>
+            <span class="card-index">01</span>
+            <h3 data-i18n="skillGroup1">تدوین و تولید محتوا</h3>
             <div class="skill-list">
-              <div class="skill-item"><span>Adobe Premiere Pro</span><b data-i18n="advanced">پیشرفته</b></div>
-              <div class="skill-item"><span>Adobe After Effects</span><b data-i18n="advanced">پیشرفته</b></div>
-              <div class="skill-item"><span>Adobe Audition</span><b data-i18n="beginner">مقدماتی</b></div>
+              <div class="skill-item"><span data-i18n="skillEditing">تدوین ویدئو</span><b data-i18n="advanced">مسلط</b></div>
+              <div class="skill-item"><span data-i18n="skillScript">سناریونویسی</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span data-i18n="skillAdContent">تولید محتوای تبلیغاتی</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span data-i18n="skillFilming">فیلم‌برداری و موبایل‌گرافی</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span data-i18n="skillLighting">نورپردازی و صدابرداری</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span data-i18n="skillColor">اصلاح رنگ و نور</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span data-i18n="skillSocial">مدیریت شبکه‌های اجتماعی</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span data-i18n="skillMotion">موشن‌گرافیک</span><b data-i18n="intermediate">متوسط</b></div>
             </div>
           </article>
           <article class="skill-card reveal">
-            <span class="card-index">B</span>
-            <h3 data-i18n="skillGroup2">طراحی و موشن</h3>
+            <span class="card-index">02</span>
+            <h3 data-i18n="softwareTitle">نرم‌افزارهای تخصصی</h3>
             <div class="skill-list">
+              <div class="skill-item"><span>Adobe Premiere Pro</span><b data-i18n="advanced">مسلط</b></div>
+              <div class="skill-item"><span>Adobe After Effects</span><b data-i18n="advanced">مسلط</b></div>
+              <div class="skill-item"><span>Adobe Audition</span><b data-i18n="upperIntermediate">متوسط رو به بالا</b></div>
               <div class="skill-item"><span>Adobe Photoshop</span><b data-i18n="intermediate">متوسط</b></div>
-              <div class="skill-item"><span>Adobe Illustrator</span><b data-i18n="intermediate">متوسط</b></div>
-              <div class="skill-item"><span>Motion Graphics</span><b data-i18n="intermediate">متوسط</b></div>
+              <div class="skill-item"><span>Adobe Illustrator</span><b data-i18n="upperIntermediate">متوسط رو به بالا</b></div>
+              <div class="skill-item"><span>CapCut</span><b data-i18n="advanced">مسلط</b></div>
+              <div class="skill-item"><span>InShot</span><b data-i18n="advanced">مسلط</b></div>
               <div class="skill-item"><span>Alight Motion</span><b data-i18n="beginner">مقدماتی</b></div>
             </div>
           </article>
           <article class="skill-card reveal">
-            <span class="card-index">C</span>
-            <h3 data-i18n="skillGroup3">فناوری و تولید</h3>
+            <span class="card-index">03</span>
+            <h3 data-i18n="programmingTitle">برنامه‌نویسی</h3>
             <div class="skill-list">
-              <div class="skill-item"><span data-i18n="aiSkill">تولید محتوا با هوش مصنوعی</span><b data-i18n="intermediate">متوسط</b></div>
-              <div class="skill-item"><span data-i18n="codingSkill">کدنویسی</span><b data-i18n="intermediate">متوسط</b></div>
-              <div class="skill-item"><span data-i18n="filmingSkill">فیلم‌برداری و موبایل‌گرافی</span><b data-i18n="practical">مهارت اجرایی</b></div>
-              <div class="skill-item"><span data-i18n="lightingSkill">نورپردازی و صدا</span><b data-i18n="practical">مهارت اجرایی</b></div>
+              <div class="skill-item"><span>JavaScript</span><b data-i18n="upperIntermediate">متوسط رو به بالا</b></div>
+              <div class="skill-item"><span>Java</span><b data-i18n="intermediate">متوسط</b></div>
+              <div class="skill-item"><span>Python</span><b data-i18n="beginner">مقدماتی</b></div>
+              <div class="skill-item"><span data-i18n="telegramBot">توسعه ربات تلگرامی</span><b data-i18n="practical">تجربه عملی</b></div>
             </div>
           </article>
+          <article class="skill-card reveal">
+            <span class="card-index">04</span>
+            <h3 data-i18n="aiTitle">ابزارهای هوش مصنوعی</h3>
+            <div class="skill-list">
+              <div class="skill-item"><span>Google Flow</span><b data-i18n="toolUsed">ابزار مورد استفاده</b></div>
+              <div class="skill-item"><span>Claude</span><b data-i18n="toolUsed">ابزار مورد استفاده</b></div>
+              <div class="skill-item"><span>Gemini</span><b data-i18n="toolUsed">ابزار مورد استفاده</b></div>
+              <div class="skill-item"><span data-i18n="aiVisual">تولید تصویر و ویدئو با AI</span><b data-i18n="toolUsed">ابزار مورد استفاده</b></div>
+              <div class="skill-item"><span data-i18n="aiWriting">سناریونویسی و تولید محتوا با AI</span><b data-i18n="toolUsed">ابزار مورد استفاده</b></div>
+            </div>
+          </article>
+          <article class="skill-card reveal">
+            <span class="card-index">05</span>
+            <h3 data-i18n="languageTitle">زبان</h3>
+            <div class="skill-list">
+              <div class="skill-item"><span data-i18n="englishLanguage">زبان انگلیسی</span><b data-i18n="lowerIntermediate">متوسط رو به پایین</b></div>
+            </div>
+            <p class="skill-card-note" data-i18n="skillNote">سطح‌ها به‌صورت توصیفی نمایش داده شده‌اند و درصد عددیِ تخمینی ندارند.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section">
+      <div class="section-wrap content-section" id="education">
+        <div class="section-heading reveal">
+          <p class="eyebrow">05 / <span data-i18n="educationLabel">تحصیلات</span></p>
+          <h2 data-i18n="educationTitle">مسیر تحصیلی</h2>
+        </div>
+        <div class="education-card reveal">
+          <div class="education-mark">IR</div>
+          <div>
+            <h3 data-i18n="university">دانشگاه بین‌المللی امام رضا</h3>
+            <p data-i18n="degree">کارشناسی مهندسی کامپیوتر</p>
+            <span data-i18n="term">ترم سوم</span>
+          </div>
+          <div class="education-date" data-i18n="birthDate">۱۱ اسفند ۱۳۸۴</div>
         </div>
       </div>
     </section>
@@ -127,7 +175,7 @@
     <section class="content-section section-wrap" id="work">
       <div class="section-heading work-heading reveal">
         <div>
-          <p class="eyebrow">03 / <span data-i18n="workLabel">منتخب پروژه‌ها</span></p>
+          <p class="eyebrow">04 / <span data-i18n="workLabel">منتخب پروژه‌ها</span></p>
           <h2 data-i18n="workTitle">چیزهایی که ساخته‌ام.</h2>
         </div>
         <p class="section-subtitle" data-i18n="workIntro">این بخش برای نمایش پروژه‌های واقعی تو آماده شده است. فایل‌ها و توضیحات نمونه را با آثار خودت جایگزین کن.</p>
@@ -164,23 +212,30 @@
     <section class="experience-section">
       <div class="section-wrap content-section">
         <div class="section-heading reveal">
-          <p class="eyebrow">04 / <span data-i18n="experienceLabel">مسیر کاری</span></p>
+          <p class="eyebrow">06 / <span data-i18n="experienceLabel">مسیر کاری</span></p>
           <h2 data-i18n="experienceTitle">تجربه در مسیر رشد</h2>
         </div>
         <div class="timeline">
-          <div class="timeline-item reveal"><span class="timeline-date" data-i18n="expDate1">۶ ماه</span><div><h3 data-i18n="expTitle1">بازاریابی در مجموعه تبلیغاتی</h3><p data-i18n="expDesc1">آشنایی با فضای تبلیغات، مخاطب و اهداف ارتباطی برند.</p></div></div>
-          <div class="timeline-item reveal"><span class="timeline-date" data-i18n="expDate2">۸ ماه اخیر</span><div><h3 data-i18n="expTitle2">تولید محتوا و تدوین</h3><p data-i18n="expDesc2">فعالیت در تولید محتوای ویدیویی، موبایل‌گرافی، تدوین و اجرای پروژه‌های خلاقانه.</p></div></div>
+          <div class="timeline-item reveal">
+            <span class="timeline-date" data-i18n="expDate1">۸ ماه</span>
+            <div><h3 data-i18n="expTitle1">گروه تبلیغاتی دژاوو</h3>
+            <p data-i18n="expDesc1">فعالیت در حوزه تولید محتوا، تدوین ویدئو و سناریونویسی.</p></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="contact-section section-wrap" id="contact">
       <div class="contact-panel reveal">
-        <p class="eyebrow">05 / <span data-i18n="contactLabel">ارتباط</span></p>
+        <p class="eyebrow">07 / <span data-i18n="contactLabel">ارتباط</span></p>
         <h2 data-i18n="contactTitle">بیایید ایده بعدی را<br><em>با هم بسازیم.</em></h2>
         <p data-i18n="contactText">برای همکاری، پروژه‌های خلاقانه یا گفت‌وگوی حرفه‌ای با من در ارتباط باش.</p>
-        <a class="button button-primary" href="mailto:your-email@example.com" data-i18n="emailMe">ارسال ایمیل <span aria-hidden="true">↗</span></a>
-        <p class="contact-hint" data-i18n="emailHint">آدرس ایمیل نمونه است؛ قبل از انتشار آن را با ایمیل خودت جایگزین کن.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:NiloofarDivandari@gmail.com"><span class="contact-icon">✉</span><span><small data-i18n="emailLabel">ایمیل</small><strong>NiloofarDivandari@gmail.com</strong></span></a>
+          <a class="contact-link" href="tel:+989922390684"><span class="contact-icon">↗</span><span><small data-i18n="phoneLabel">تلفن</small><strong dir="ltr">+98 992 239 0684</strong></span></a>
+          <a class="contact-link" href="https://t.me/Nilufard_4" target="_blank" rel="noopener noreferrer"><span class="contact-icon">➤</span><span><small>Telegram</small><strong>@Nilufard_4</strong></span></a>
+        </div>
+        <a class="button button-primary" href="mailto:NiloofarDivandari@gmail.com" data-i18n="emailMe">ارسال ایمیل <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
